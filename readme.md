@@ -11,6 +11,6 @@
 
 使用方法：getEdgesFromVideo(视频文件名)
 
-**getStaticFrame**(edgesFrame,startFrame,endFrame,step)：由edges四维数组提取出维持不动的像素点，并返回[帧宽，帧高，帧深度=1]
+**getStaticFrame**(edgesFrame,startFrame,endFrame,step)：由edges四维数组提取出维持不动的像素点，并返回[帧宽，帧高，通道数=1]
 
 使用方法：getStaticFrame(四维图像数组, 开始帧=1, 结束帧=总帧数, 循环步伐=1)
