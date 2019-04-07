@@ -1,4 +1,4 @@
-.asv
-.mp4
-.avi
-.exe
+*.asv
+*.mp4
+*.avi
+*.exe
