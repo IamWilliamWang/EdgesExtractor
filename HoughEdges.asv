@@ -11,15 +11,7 @@ lines = houghlines(BW,T,R,peaks);%用霍夫变换检测和连接线
 for k = 1:length(lines)
     p1 = lines(k).point1;
     p2 = lines(k).point2;
-    plot(p1,p2,'LineWidth',4)
+    syms slope b
+    [b, slope] = solve(slope*p1(1)-p1(2)+b, slope*p2(1)-p2(2)+b);
+    plot([(h-b)/slope, (0.4*h-b)/slope], [h, 0.4*h], 'g-', 'LineWidth',3);
 end
- %右方直线检测与绘制
-[H2,T2,R2] = hough(BW,'Theta',-75:0.1:-20);
-Peaks1=houghpeaks(H2,5);
-lines1=houghlines(Iedge,T2,R2,Peaks1);
-for k=1:length(lines1)
-xy1=[lines1(k).point1;lines1(k).point2];   
-plot(xy1(:,1),xy1(:,2),'LineWidth',4);
-end
-
-hold off
