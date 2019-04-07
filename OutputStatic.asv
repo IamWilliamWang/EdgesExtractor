@@ -1,9 +1,0 @@
-edgesFrame = getEdgesFromVideo('¿ª¹Ø¹ñ_±ßÔµÊä³ö.avi');
-[heightCount,widthCount,depthCount,frameCount] = size(edgesFrame);
-for loop=1:4
-    startFrame=frameCount*loop/(loop+1);
-    result=getStatic()
-    subplot(2,2,loop)
-    imshow(result)
-    title(strcat(mat2str(loop), '/', mat2str(loop+1) ) )
-end
