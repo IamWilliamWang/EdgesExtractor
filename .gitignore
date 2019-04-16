@@ -1,4 +1,7 @@
+# Auto save
 *.asv
+# Videos
 *.mp4
 *.avi
+# Executable files
 *.exe
